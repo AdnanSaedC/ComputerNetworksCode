@@ -4,11 +4,10 @@ public class localHost {
     public static void main(String args[]) {
         try {
         // Get the network interfaces on the machine
-        Enumeration<NetworkInterface> networkInterfaces =
-        NetworkInterface.getNetworkInterfaces();
+        Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
         while (networkInterfaces.hasMoreElements()) {
             NetworkInterface networkInterface = networkInterfaces.nextElement();
-            System.out.println("Network Interface: " + networkInterface.getName());
+            System.out.println("Network Interface: " + networkInterfaces.nextElement().getName());
         }
         } 
         catch (SocketException e) {

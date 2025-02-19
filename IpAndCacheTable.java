@@ -2,14 +2,14 @@ import java.io.*;
 import java.net.*;
 public class IpAndCacheTable {
         public static void main(String[] args) {
-        try {
+        try {              
 
             InetAddress host = InetAddress.getLocalHost();
             System.out.println("Host IP Address: " + host.getHostAddress());
 
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
 
-            Process process = Runtime.getRuntime().exec("arp -a");
+            Process process = Runtime.getRuntime().exec("nslookup www.google.com");
             BufferedReader reader = new BufferedReader(new
             InputStreamReader(process.getInputStream()));
             String line;
@@ -19,7 +19,7 @@ public class IpAndCacheTable {
         } 
         else {
             
-            Process process = Runtime.getRuntime().exec("arp -n");
+            Process process = Runtime.getRuntime().exec("nslookup www.google.com");
             BufferedReader reader = new BufferedReader(new
             InputStreamReader(process.getInputStream()));
             String line;

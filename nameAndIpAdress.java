@@ -1,5 +1,4 @@
 import java.net.*;
-import java.lang.Exception;
 public class nameAndIpAdress {
     public static void main(String[] args) {
     try {

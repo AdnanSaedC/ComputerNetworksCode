@@ -11,7 +11,7 @@ import java.net.*;
     try {
         InetAddress inetAddress = InetAddress.getByName(domainName);
         System.out.println("IP address of " + domainName + ": " + inetAddress.getHostAddress());
-    } catch (UnknownHostException e) {
+    } catch (Exception e) {
         System.out.println("Error" + domainName);
     }
     }
